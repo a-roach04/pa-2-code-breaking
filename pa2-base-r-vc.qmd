@@ -60,13 +60,17 @@ Each of the following R chunks will cause an error and / or do the desired task 
 1.  Create vectors containing the upper case letters, lower case letters, and some punctuation marks. add a label that indicate this code chunk creates the vectors of letters and punctuation.
 
 ```{r}
+#| label: Making Vectors
 
+# making a vector of lowercase letters
 lower_case <- c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
                 "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z")
 
-upper_case <- c("A", "B", "C", "D", "E", "F", "G", "H" "I", "J", "K", "L", "M",
+# making a vector of uppercase letters
+upper_case <- c("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
                 "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z")
 
+# making a vector for punctuation
 punctuation <- c(".", ",", "!", "?", "'", '"', "(", ")", " ", "-", ";", ":")
 
 ```
@@ -74,25 +78,37 @@ punctuation <- c(".", ",", "!", "?", "'", '"', "(", ")", " ", "-", ";", ":")
 2.  Make **one** long **vector** containing all the symbols.
 
 ```{r}
-my_symbols <- (lower_case, upper_case, punctuation)
+#| label: symbol vector
+
+# making one vectore of all 3
+my_symbols <- c(lower_case, upper_case, punctuation)
 ```
 
 3.  Turn the `my_symbols` vector into a data frame, with one column named "symbol".
 
 ```{r}
-my_symbols <- dataframe(symbol = my_symbols)
+#| label: symbol data frame 
+
+# making my symbols into a dataframe
+my_symbols <- data.frame(symbol = my_symbols)
 ```
 
 4.  Find the total number of symbols we have in our data frame.
 
 ```{r}
-len <- length(my_Symbols)
+#| label: Length of my symbols
+
+# using length to calculate the length of the data frame
+len <- length(my_symbols$symbol)
 ```
 
 5.  Create a new variable in your dataframe that assigns a number to each symbol.
 
 ```{r}
-my_symbols%Num <- 1:len
+#| label: Assigning a number to symbols
+
+# assigned a number to the symbols in the dataframe
+my_symbolsNum <- 1:len
 ```
 
 <!-- Developer Stage your Changes, Commit, and Push to the Git Repository-->
